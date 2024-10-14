@@ -25,20 +25,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Stateful Widget Example'),
           backgroundColor: Colors.amber,
         ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              color: Colors.lightBlue[50],
-              width: 300,
-              height: 300,
-              child: const Center(
-                child: Text('This is inside')
-                ),
-            ),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                color: Colors.lightBlue[50],
+                width: 300,
+                height: 300,
+                child: const Center(child: Text('This is inside')),
+              ),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
