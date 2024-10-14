@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Homepage(),
+  runApp(MaterialApp(
+    home: const Homepage(),
+    theme: ThemeData(
+      primarySwatch: Colors.orange,
+    ),
   ));
 }
 
@@ -21,3 +24,4 @@ class Homepage extends StatelessWidget {
 
 //qaqaqaqaq
 //what can i do 
+//hmmmmm not sure 
