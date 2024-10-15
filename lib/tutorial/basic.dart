@@ -19,37 +19,45 @@ class Homepage extends StatelessWidget {
         backgroundColor: Colors.orange[300],
         title: const Text("Basic Tutorial"),
       ),
-      body: Center(
-        child: Container(
-          padding:
-              const EdgeInsets.all(8), //spacing betwwen the text in the box
-          //color: Colors.red[400],  //since decoration use color no need le else error
-          width: 100,
-          height: 100,
-          //clipBehavior: Clip.none, //use to remove border
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              //useful feature to add images or color
-              color: Colors.red[300],
-              //shape: BoxShape.circle,
-              borderRadius: BorderRadius.circular(10),
-              gradient: const LinearGradient(colors: [
-                Colors.red,
-                Colors.blue
-              ]), //paint the box with 2 colors
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 7,
-                ),
-              ]),
-          child: const Text(
-            "I'm brokestick",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
+      body: Container(
+        color: Colors.teal,
+        height: 200,
+        width: 500,
+        child: Row(
+            //if replace with columm become vertical main and cross become vertical
+            mainAxisAlignment:
+                MainAxisAlignment.spaceEvenly, //spacing between row
+            crossAxisAlignment:
+                CrossAxisAlignment.end, //spacing between the container for row
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.all(
+                    8), //spacing betwwen the text in the box
+                color: Colors.red[
+                    400], //since decoration use color no need le else error
+                width: 100,
+                height: 100,
+                alignment: Alignment.center,
+              ),
+              Container(
+                padding: const EdgeInsets.all(
+                    8), //spacing betwwen the text in the box
+                color: Colors.red[
+                    300], //since decoration use color no need le else error
+                width: 100,
+                height: 100,
+                alignment: Alignment.center,
+              ),
+              Container(
+                padding: const EdgeInsets.all(
+                    8), //spacing betwwen the text in the box
+                color: Colors.red[
+                    200], //since decoration use color no need le else error
+                width: 100,
+                height: 100,
+                alignment: Alignment.center,
+              ),
+            ]),
       ),
     );
   }
