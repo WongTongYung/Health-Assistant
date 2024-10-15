@@ -2,27 +2,25 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: const Homepage(),
+    home: Homepage(),
     theme: ThemeData(
       primarySwatch: Colors.orange,
     ),
   ));
 }
 
+// ignore: use_key_in_widget_constructors
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orange[300],
         title: const Text("Basic Tutorial"),
+      ),
+      body: Container(
+        child: const Text("Hello World"),
       ),
     );
   }
 }
-
-//qaqaqaqaq
-//what can i do 
-//hmmmmm not sure 
-//nice
