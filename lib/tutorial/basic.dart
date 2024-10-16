@@ -20,13 +20,13 @@ class Homepage extends StatelessWidget {
         title: const Text("Basic Tutorial"),
       ),
       body: Container(
-        color: Colors.grey[230],
+        color: Colors.grey[200],
         child: Column(
           mainAxisAlignment:
               MainAxisAlignment.start, // Aligns children at the top
           children: [
             Container(
-              color: Colors.teal,
+              color: Colors.white,
               height: 150,
               padding: const EdgeInsets.all(20),
               child: Row(
