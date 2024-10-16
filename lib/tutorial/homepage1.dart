@@ -1,3 +1,4 @@
+import 'package:app/tutorial/second_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +17,29 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange[300],
-        title: const Text("Basic Tutorial"),
+        title: const Text("Personal Health Assistant",
+            style: TextStyle(fontSize: 20)),
+        centerTitle: true,
       ),
+      bottomNavigationBar: BottomAppBar(
+          color: Colors.blue,
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(
+                icon: const Icon(Icons.home),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          )),
       body: Container(
         color: Colors.grey[200],
         child: SingleChildScrollView(
