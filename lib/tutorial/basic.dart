@@ -25,45 +25,52 @@ class Homepage extends StatelessWidget {
           mainAxisAlignment:
               MainAxisAlignment.start, // Aligns children at the top
           children: [
-            Container(
-              color: Colors.white,
-              height: 150,
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                  //if replace with columm become vertical main and cross become vertical
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, //spacing between row
-                  crossAxisAlignment: CrossAxisAlignment
-                      .end, //spacing between the container for row
-                  children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.all(
-                          8), //spacing betwwen the text in the box
-                      color: Colors.red[
-                          400], //since decoration use color no need le else error
-                      width: 100,
-                      height: 100,
-                      alignment: Alignment.center,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(
-                          8), //spacing betwwen the text in the box
-                      color: Colors.red[
-                          300], //since decoration use color no need le else error
-                      width: 100,
-                      height: 100,
-                      alignment: Alignment.center,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(
-                          8), //spacing betwwen the text in the box
-                      color: Colors.red[
-                          200], //since decoration use color no need le else error
-                      width: 100,
-                      height: 100,
-                      alignment: Alignment.center,
-                    ),
-                  ]),
+            Padding(
+              padding: const EdgeInsets.all(17.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20), // Rounded corners
+                ),
+                //color: Colors.white,
+                height: 150,
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                    //if replace with columm become vertical main and cross become vertical
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceEvenly, //spacing between row
+                    crossAxisAlignment: CrossAxisAlignment
+                        .end, //spacing between the container for row
+                    children: <Widget>[
+                      Container(
+                        padding: const EdgeInsets.all(
+                            8), //spacing betwwen the text in the box
+                        color: Colors.red[
+                            400], //since decoration use color no need le else error
+                        width: 100,
+                        height: 100,
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(
+                            8), //spacing betwwen the text in the box
+                        color: Colors.red[
+                            300], //since decoration use color no need le else error
+                        width: 100,
+                        height: 100,
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(
+                            8), //spacing betwwen the text in the box
+                        color: Colors.red[
+                            200], //since decoration use color no need le else error
+                        width: 100,
+                        height: 100,
+                        alignment: Alignment.center,
+                      ),
+                    ]),
+              ),
             ),
           ],
         ),
