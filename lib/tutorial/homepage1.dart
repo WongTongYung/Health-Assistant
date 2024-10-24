@@ -1,5 +1,8 @@
+import 'package:app/tutorial/app_bar.dart';
+import 'package:app/tutorial/bottom_bar.dart';
 import 'package:app/tutorial/second_page.dart';
 import 'package:flutter/material.dart';
+import 'ad_slider.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -18,60 +21,10 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appbar used to display the top bar
-      appBar: AppBar(
-        backgroundColor: Colors.orange[300],
-        title: const Text("Personal Health Assistant",
-            style: TextStyle(fontSize: 20)),
-        centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.notifications),
-            onPressed: () {},
-          ),
-        ],
-      ),
+      appBar: const TopBar(),
       //This is used to display the bottom bar
-      bottomNavigationBar: BottomAppBar(
-          color: Colors.blue,
-          //height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              IconButton(
-                icon: const Icon(Icons.settings),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                    ),
-                  );
-                },
-              ),
-              IconButton(
-                icon: const Icon(Icons.home),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                    ),
-                  );
-                },
-              ),
-              IconButton(
-                icon: const Icon(Icons.info),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                    ),
-                  );
-                },
-              ),
-            ],
-          )),
+      bottomNavigationBar: const BottomBar(),
+
       body: Container(
         color: Colors.grey[200],
         child: SingleChildScrollView(
@@ -120,6 +73,7 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
               ),
+              AdSlider(),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
@@ -354,20 +308,53 @@ class Homepage extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.orange[500],
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.black26,
-                                  blurRadius: 5.0,
-                                  spreadRadius: 1.0,
+                          child: InkWell(
+                            //wrap with material to ensure ripple effect
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SecondPage(),
                                 ),
-                              ],
+                              );
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.amber[200],
+                                borderRadius: BorderRadius.circular(30),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.black26,
+                                    blurRadius: 5.0,
+                                    spreadRadius: 1.0,
+                                  ),
+                                ],
+                              ),
+                              height: 100,
+                              alignment: Alignment.topCenter,
+                              child: const Column(
+                                mainAxisAlignment: MainAxisAlignment
+                                    .center, // Center content vertically
+                                children: [
+                                  Text(
+                                    "Daily Quote",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Don't forget to drink water!\nStay hydrated throughout the day!",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            height: 100,
-                            alignment: Alignment.center,
                           ),
                         ),
                       ],
