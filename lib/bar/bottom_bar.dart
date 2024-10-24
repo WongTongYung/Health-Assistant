@@ -1,6 +1,6 @@
-import 'package:app/tutorial/homepage1.dart';
-import 'package:app/tutorial/information_page2.dart';
-import 'package:app/tutorial/second_page.dart';
+import 'package:app/homepage2.dart';
+import 'package:app/information_page2.dart';
+import 'package:app/second_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
@@ -9,7 +9,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.blue,
+      color: Theme.of(context).colorScheme.primary,
       //height: 50,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -20,7 +20,7 @@ class BottomBar extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SecondPage(),
+                  builder: (context) => const SecondPage(),
                 ),
               );
             },
@@ -31,7 +31,7 @@ class BottomBar extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Homepage(),
+                  builder: (context) => const Homepage(),
                 ),
               );
             },
@@ -42,7 +42,7 @@ class BottomBar extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => InformationPage(),
+                  builder: (context) => const InformationPage(),
                 ),
               );
             },

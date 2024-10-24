@@ -6,7 +6,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.orange[300],
+      backgroundColor: Theme.of(context).colorScheme.primary,
       title: const Text("Personal Health Assistant",
           style: TextStyle(fontSize: 20)),
       centerTitle: true,
