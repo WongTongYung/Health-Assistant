@@ -7,6 +7,7 @@ class InformationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: const Text('Information Page'),
       ),
       body: SingleChildScrollView(
@@ -45,10 +46,10 @@ class InformationPage extends StatelessWidget {
                   'Safe and readily available water is important for public health, whether it is used for drinking, domestic use, food production or recreational...',
             ),
             buildInfoContainer(
-              color: Colors.green[200]!,
-              title: 'Drinking water',
+              color: Colors.orange[200]!,
+              title: 'Priotize your health, Tips for well-being',
               description:
-                  'Safe and readily available water is important for public health, whether it is used for drinking, domestic use, food production or recreational...',
+                  'There are some this you can follow to take care of your health. First is to Eat well. Exercise. Get enough sleep. Stay..',
             ),
           ],
         ),
@@ -62,7 +63,7 @@ class InformationPage extends StatelessWidget {
     required String description,
   }) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: BoxDecoration(
           color: color,

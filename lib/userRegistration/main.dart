@@ -1,4 +1,4 @@
-import 'package:app/dailyQuote/display.dart';
+import 'package:app/userRegistration/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,16 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Health tracker app',
+      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue[300]!,
+          seedColor: Colors.red,
         ),
         useMaterial3: true,
       ),
-      //home: const Homepage(),
-      //home: const LoginScreen(),
-      home: const Display(),
+      home: const LoginScreen(),
     );
   }
 }

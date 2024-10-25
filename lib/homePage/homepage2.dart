@@ -1,7 +1,8 @@
-import 'package:app/info_card.dart';
+import 'package:app/homePage/info_card.dart';
 import 'package:app/bar/top_bar.dart';
-import 'package:app/bar/bottom_bar.dart';
+import 'package:app/homePage/bottom_bar.dart';
 import 'package:app/second_page.dart';
+import 'package:app/userRegistration/userdb.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -12,6 +13,23 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomePageState extends State<Homepage> {
+  String username = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUsername();
+  }
+
+  Future<void> _loadUsername() async {
+    DatabaseHelper dbHelper = DatabaseHelper();
+    String? fetchedUsername =
+        await dbHelper.getUsername(1); // Replace 1 with the actual user ID
+    setState(() {
+      username = fetchedUsername!; // Default to 'Guest' if no username found
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,8 +62,8 @@ class _HomePageState extends State<Homepage> {
                         ),
                       ),
                       const SizedBox(height: 10.0),
-                      const Text(
-                        'Welcome back Brooke Cagle!!',
+                      Text(
+                        'Welcome back $username!!',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.normal,
