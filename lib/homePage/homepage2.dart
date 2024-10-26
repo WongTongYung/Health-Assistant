@@ -1,7 +1,10 @@
+import 'package:app/Steps/step_page.dart';
+import 'package:app/bar/bottom_bar.dart';
+import 'package:app/Intake/food.dart';
 import 'package:app/homePage/info_card.dart';
 import 'package:app/bar/top_bar.dart';
-import 'package:app/homePage/bottom_bar.dart';
-import 'package:app/second_page.dart';
+import 'package:app/homePage/information_page2.dart';
+import 'package:app/Intake/water.dart';
 import 'package:app/userRegistration/userdb.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +17,6 @@ class Homepage extends StatefulWidget {
 
 class _HomePageState extends State<Homepage> {
   String username = '';
-
   @override
   void initState() {
     super.initState();
@@ -121,7 +123,12 @@ class _HomePageState extends State<Homepage> {
                       const SizedBox(height: 10.0),
                       ElevatedButton(
                         onPressed: () {
-                          // Define what happens when the button is pressed
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const InformationPage(),
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           foregroundColor: Colors.green[400],
@@ -150,13 +157,13 @@ class _HomePageState extends State<Homepage> {
                         InfoCard(
                           color: Colors.blue[500]!,
                           imagePath: "images/water.jpg",
-                          title: "Water Intake: 100ml",
+                          title: "Water Intake",
                           subtitle: "",
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SecondPage(),
+                                builder: (context) => const WaterPage(),
                               ),
                             );
                           },
@@ -164,13 +171,27 @@ class _HomePageState extends State<Homepage> {
                         InfoCard(
                           color: Colors.red[500]!,
                           imagePath: "images/step.jpg",
-                          title: "Steps: 3456",
+                          title: "Steps",
                           subtitle: "",
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SecondPage(),
+                                builder: (context) => const StepPage(),
+                              ),
+                            );
+                          },
+                        ),
+                        InfoCard(
+                          color: Colors.amber[300]!,
+                          imagePath: "images/food.png",
+                          title: "Calori",
+                          subtitle: "",
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const FoodIntakePage(),
                               ),
                             );
                           },
@@ -181,29 +202,7 @@ class _HomePageState extends State<Homepage> {
                           title: "Daily Quote",
                           subtitle:
                               "Don't forget to drink water!\nStay hydrated throughout the day!",
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SecondPage(),
-                              ),
-                            );
-                          },
-                        ),
-                        InfoCard(
-                          color: Colors.amber[200]!,
-                          imagePath: "",
-                          title: "Daily Quote",
-                          subtitle:
-                              "Don't forget to drink water!\nStay hydrated throughout the day!",
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SecondPage(),
-                              ),
-                            );
-                          },
+                          onTap: () {},
                         ),
                       ],
                     ),

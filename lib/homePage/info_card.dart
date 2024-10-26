@@ -63,6 +63,7 @@ class InfoCard extends StatelessWidget {
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 //subtitle for the text in the daily quote
                 if (subtitle.isNotEmpty)

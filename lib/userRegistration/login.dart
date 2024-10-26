@@ -1,3 +1,4 @@
+import 'package:app/bar/top_bar.dart';
 import 'package:app/homePage/homepage2.dart';
 import 'package:app/userRegistration/sign_up.dart';
 import 'package:app/userRegistration/user.dart';
@@ -26,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
   //This is for creating global key
   final formkey = GlobalKey<FormState>();
 
-
   //Now we should call this function in login button
   login() async {
     var response = await db
@@ -46,10 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: const Text('Login'),
-      ),
+      appBar: TopBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -68,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //put text
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
@@ -99,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Container(
                     margin: const EdgeInsets.only(top: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
@@ -143,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 200,
                     margin: const EdgeInsets.only(top: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(

@@ -1,6 +1,6 @@
+import 'package:app/addTask/add_task_page.dart';
 import 'package:app/homePage/homepage2.dart';
 import 'package:app/homePage/information_page2.dart';
-import 'package:app/second_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
@@ -15,12 +15,12 @@ class BottomBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(Icons.note_add),
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const SecondPage(),
+                  builder: (context) => const AddTaskPage(),
                 ),
               );
             },

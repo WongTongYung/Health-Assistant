@@ -15,12 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Health tracker app',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue[300]!,
+          seedColor: Colors.blue[200]!,
         ),
         useMaterial3: true,
       ),
-      //home: const Homepage(),
-      //home: const LoginScreen(),
       home: const Display(),
     );
   }

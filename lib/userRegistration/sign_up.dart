@@ -1,3 +1,4 @@
+import 'package:app/bar/top_bar.dart';
 import 'package:app/userRegistration/login.dart';
 import 'package:app/userRegistration/user.dart';
 import 'package:app/userRegistration/userdb.dart';
@@ -26,10 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: const Text('Login'),
-      ),
+      appBar: TopBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -47,7 +45,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
@@ -78,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Container(
                     margin: const EdgeInsets.only(top: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
@@ -109,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Container(
                     margin: const EdgeInsets.only(top: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300], // Use a health-related color
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
@@ -142,7 +140,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Container(
                     margin: const EdgeInsets.only(top: 10.0),
                     decoration: BoxDecoration(
-                      color: Colors.green[400], // Use a health-related color
+                      color: Colors.indigo[300],
                       borderRadius: BorderRadius.circular(8), // Rounded corners
                       boxShadow: const [
                         BoxShadow(
