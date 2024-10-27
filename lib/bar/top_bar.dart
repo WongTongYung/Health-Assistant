@@ -10,12 +10,6 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
       title: const Text("Personal Health Assistant",
           style: TextStyle(fontSize: 20)),
       centerTitle: true,
-      actions: <Widget>[
-        IconButton(
-          icon: const Icon(Icons.notifications),
-          onPressed: () {},
-        ),
-      ],
     );
   }
 

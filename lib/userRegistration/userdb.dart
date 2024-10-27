@@ -49,6 +49,15 @@ class DatabaseHelper {
   Future<int> signup(Users user) async {
     final Database db = await initDB();
 
+    List<Map<String, dynamic>> existingUser = await db.query(
+      'users',
+      where: 'usrname = ?', // Assuming you have a 'username' field
+      whereArgs: [user.usrName],
+    );
+    if (existingUser.isNotEmpty) {
+      return -1;
+    }
+
     return db.insert('users', user.toMap());
   }
 
