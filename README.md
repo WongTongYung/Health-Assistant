@@ -9,4 +9,6 @@ About PETAKOM
  participate in innovative projects, and collaborate on tech-driven
  initiatives.
 
- Our case study theme is code for changes, which is developing a application using 
+Our case study theme is code for changes, which is developing a application using flutter as our main framework to develop the application. We choose the case study of 7, Good health and well-being as our theme.
+
+
