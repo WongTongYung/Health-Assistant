@@ -1,4 +1,4 @@
-# Health-Assistant
+# PETAKOM'S HACKATHONX
 About PETAKOM
  PETAKOM is a dynamic student club under the Faculty of Computing
  at Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA).
@@ -8,3 +8,5 @@ About PETAKOM
  a platform for students to engage with emerging technologies,
  participate in innovative projects, and collaborate on tech-driven
  initiatives.
+
+ Our case study theme is code for changes, which is developing a application using 
