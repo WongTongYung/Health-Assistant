@@ -1,2 +1,10 @@
 # Health-Assistant
-Pertekma
+About PETAKOM
+ PETAKOM is a dynamic student club under the Faculty of Computing
+ at Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA).
+ Established with the vision of fostering a vibrant IT community,
+ PETAKOM is dedicated to enhancing student and faculty
+ involvement in technology and computing fields. The club serves as
+ a platform for students to engage with emerging technologies,
+ participate in innovative projects, and collaborate on tech-driven
+ initiatives.
